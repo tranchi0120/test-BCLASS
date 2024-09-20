@@ -1,0 +1,21 @@
+#root {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.group-image {
+    max-width: 240px;
+    max-height: 240px;
+    object-fit: cover;
+}
+
+.image-item {
+    width: 100%;
+    height: 100%;
+}
+
+.listItem {
+    background-color: #fefae0;
+}
+
