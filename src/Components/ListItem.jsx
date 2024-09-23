@@ -1,7 +1,12 @@
-/* eslint-disable react/prop-types */
+import { useContext } from "react";
 import Item from "./Item.jsx";
+import ContextData from "../ConText/context.js";
+import PropTypes from "prop-types";
 
-const ListItem = ({ listData, listDistrict }) => {
+const ListItem = () => {
+
+  const { listDistrict, filteredData } = useContext(ContextData);
+
 
   const findDistrictName = (districtCode) => {
     if (listDistrict !== null) {
@@ -15,7 +20,7 @@ const ListItem = ({ listData, listDistrict }) => {
   return (
     <>
       <div className="mt-5 listItem">
-        {listData.map((item, index) => (
+        {filteredData.map((item, index) => (
           <Item
             key={index}
             title={item.title}
@@ -29,6 +34,10 @@ const ListItem = ({ listData, listDistrict }) => {
       </div>
     </>
   );
+};
+
+ListItem.propTypes = {
+  listData: PropTypes.node.isRequired,
 };
 
 export default ListItem;

@@ -1,10 +1,11 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Button, Form, Input, Select } from "antd";
 import { acreageOptions, PriceOptions } from "../../utils/data/defaultData";
+import ContextData from "../../ConText/context";
 
-const FormInput = (props) => {
-  const { listCity, listDistrict, listData, setFilteredData } = props;
+const FormInput = () => {
+  const { listCity, listDistrict, listData, setFilteredData } = useContext(ContextData);
 
   const [filteredDistricts, setFilteredDistricts] = useState([]);
   const [inputTitle, setInputTitle] = useState("");

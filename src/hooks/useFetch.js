@@ -7,6 +7,8 @@ const useFetch = () => {
     listCity: [],
     listDistrict: []
   });
+  const [filteredData, setFilteredData] = useState(data.listData);
+
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -25,6 +27,7 @@ const useFetch = () => {
         const listDistrict = Object.values(districtRes.data[0]);
 
         setData({ listData, listCity, listDistrict });
+        setFilteredData(listData)
       } catch (error) {
         console.error("Lỗi khi gọi API:", error);
         setError("Có lỗi xảy ra khi tải dữ liệu.");
@@ -36,7 +39,11 @@ const useFetch = () => {
     fetchingData();
   }, []);
 
-  return { ...data, loading, error };
+  useEffect(() => {
+    setFilteredData(data.listData);
+  }, [data.listData]);
+
+  return { ...data, loading, error, filteredData, setFilteredData };
 };
 
 export default useFetch;

@@ -1,12 +1,13 @@
 import './App.css'
 import Home from "./Components/Home.jsx";
+import ContextProvider from './ConText/ProviderContext.jsx';
 
 function App() {
 
     return (
-        <>
-            <Home/>
-        </>
+        <ContextProvider>
+            <Home />
+        </ContextProvider>
     )
 }
 

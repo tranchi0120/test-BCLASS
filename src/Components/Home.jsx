@@ -1,24 +1,21 @@
-import { useState, useEffect } from 'react';
+import { useContext } from 'react';
 import ListItem from "./ListItem.jsx";
 import FormInput from './Form/FormInput.jsx';
-import useFetch from '../hooks/useFetch.js';
 import { Spin } from 'antd';
+import ContextData from '../ConText/context.js';
 
 const Home = () => {
-  const { listData, listCity, listDistrict, loading } = useFetch();
-  const [filteredData, setFilteredData] = useState(listData);
+  const { loading, filteredData } = useContext(ContextData);
+  // const [filteredData, setFilteredData] = useState(listData);
 
-  useEffect(() => {
-    setFilteredData(listData);
-  }, [listData]);
+  // useEffect(() => {
+  //   setFilteredData(listData);
+  // }, [listData]);
 
   return (
     <div>
       <FormInput
-        listCity={listCity}
-        listDistrict={listDistrict}
-        listData={listData}
-        setFilteredData={setFilteredData}
+      // setFilteredData={setFilteredData}
       />
 
       {loading ? (
@@ -27,8 +24,7 @@ const Home = () => {
       ) : (
         <>
           <ListItem
-            listData={filteredData}
-            listDistrict={listDistrict}
+          // listData={filteredData}
           />
           {filteredData.length === 0 && <div>Không tìm thấy dữ liệu động dữ liệu</div>}
         </>
