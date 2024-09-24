@@ -6,28 +6,18 @@ import ContextData from '../ConText/context.js';
 
 const Home = () => {
   const { loading, filteredData } = useContext(ContextData);
-  // const [filteredData, setFilteredData] = useState(listData);
-
-  // useEffect(() => {
-  //   setFilteredData(listData);
-  // }, [listData]);
 
   return (
     <div>
-      <FormInput
-      // setFilteredData={setFilteredData}
-      />
-
+      <FormInput />
       {loading ? (
         <Spin tip="Loading" type="info" size="large" className='mt-6' fullscreen />
 
       ) : (
-        <>
-          <ListItem
-          // listData={filteredData}
-          />
+        <div>
+          <ListItem />
           {filteredData.length === 0 && <div>Không tìm thấy dữ liệu động dữ liệu</div>}
-        </>
+        </div>
       )}
     </div>
   );

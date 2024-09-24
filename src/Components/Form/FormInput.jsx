@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useContext, useState } from "react";
 import { Button, Form, Input, Select } from "antd";
 import { acreageOptions, PriceOptions } from "../../utils/data/defaultData";

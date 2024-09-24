@@ -1,13 +1,9 @@
 import { useContext } from "react";
 import Item from "./Item.jsx";
 import ContextData from "../ConText/context.js";
-import PropTypes from "prop-types";
 
 const ListItem = () => {
-
   const { listDistrict, filteredData } = useContext(ContextData);
-
-
   const findDistrictName = (districtCode) => {
     if (listDistrict !== null) {
       const district = listDistrict.find(quan => quan.code === districtCode);
@@ -20,7 +16,7 @@ const ListItem = () => {
   return (
     <>
       <div className="mt-5 listItem">
-        {filteredData.map((item, index) => (
+        {filteredData?.map((item, index) => (
           <Item
             key={index}
             title={item.title}
@@ -34,10 +30,6 @@ const ListItem = () => {
       </div>
     </>
   );
-};
-
-ListItem.propTypes = {
-  listData: PropTypes.node.isRequired,
 };
 
 export default ListItem;
