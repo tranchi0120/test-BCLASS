@@ -1,9 +1,7 @@
-import './App.css'
-import Home from "./Components/Home.jsx";
-import ContextProvider from './ConText/ProviderContext.jsx';
+import Home from '@components/Home'
+import ContextProvider from '@context/ProviderContext'
 
 function App() {
-
     return (
         <ContextProvider>
             <Home />
