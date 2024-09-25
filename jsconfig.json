@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@components/*": ["src/Components/*"],
+      "@utils/*": ["src/utils/*"],
+      "@assets/*": ["src/assets/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@context/*": ["src/ConText/*"]
+    },
+    "lib": ["es6", "dom"],
+    "target": "es6"
+  },
+  "include": ["src/**/*"]
+}

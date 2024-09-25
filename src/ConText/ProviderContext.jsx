@@ -1,6 +1,6 @@
+import ContextData from '@context/context';
+import useFetch from '@hooks/useFetch';
 import PropTypes from 'prop-types';
-import useFetch from "../hooks/useFetch";
-import ContextData from "./context";
 
 const ContextProvider = ({ children }) => {
 

@@ -1,6 +1,6 @@
+import Item from "@components/Item";
+import ContextData from "@context/context";
 import { useContext } from "react";
-import Item from "./Item.jsx";
-import ContextData from "../ConText/context.js";
 
 const ListItem = () => {
   const { listDistrict, filteredData } = useContext(ContextData);

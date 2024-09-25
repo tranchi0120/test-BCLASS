@@ -1,8 +1,8 @@
 import { useContext } from 'react';
-import ListItem from "./ListItem.jsx";
-import FormInput from './Form/FormInput.jsx';
 import { Spin } from 'antd';
-import ContextData from '../ConText/context.js';
+import FormInput from '@components/Form/FormInput.jsx';
+import ListItem from '@components/ListItem.jsx';
+import ContextData from '@context/context';
 
 const Home = () => {
   const { loading, filteredData } = useContext(ContextData);

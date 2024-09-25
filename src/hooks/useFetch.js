@@ -1,5 +1,5 @@
+import instance from "@utils/data/instance";
 import { useEffect, useState } from "react";
-import instance from "../utils/data/instance";
 
 const useFetch = () => {
   const [data, setData] = useState({
@@ -7,7 +7,7 @@ const useFetch = () => {
     listCity: [],
     listDistrict: []
   });
-  const [filteredData, setFilteredData] = useState(data.listData);
+  const [filteredData, setFilteredData] = useState([]);
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -29,8 +29,7 @@ const useFetch = () => {
         setData({ listData, listCity, listDistrict });
         setFilteredData(listData)
       } catch (error) {
-        console.error("Lỗi khi gọi API:", error);
-        setError("Có lỗi xảy ra khi tải dữ liệu.");
+        setError("Có lỗi xảy ra khi tải dữ liệu.", error);
       } finally {
         setLoading(false);
       }
