@@ -1,0 +1,54 @@
+@import '@styles/global.module.scss';
+@import '@styles/mixin.module.scss';
+@import '@styles/variable.module.scss';
+
+
+.product{
+  &_header{
+    @include flex_custom(center, center, 10px);
+    flex-direction:column;
+  }
+
+  &_offer{
+    color: $thr_color;
+    line-height: 26px;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif !important;
+    text-transform: uppercase;
+  }
+
+  &_title {
+    color: $primary_color;
+    font-size: 24px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    white-space: nowrap;
+  }
+
+  &_title::before,
+  &_title::after {
+    content: "";
+    height: 4px;
+    width: 80%;
+    align-self: center;
+    display: inline-block;
+    border-top: 0.5px solid $secondary_color;
+    border-bottom: 0.5px solid $secondary_color;
+    padding-bottom: 2px;
+  }
+
+  &_title::before {
+    margin-right: 40px;
+  }
+
+  &_title::after {
+    margin-left: 40px;
+  }
+}
+
+
+

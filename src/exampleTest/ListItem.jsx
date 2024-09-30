@@ -1,5 +1,5 @@
-import Item from '@components/Item'
-import ContextData from '@context/context'
+import Item from '@/exampleTest/Item.jsx'
+import ContextData from '@/exampleTest/ConText/context.js'
 import { useContext } from 'react'
 
 const ListItem = () => {

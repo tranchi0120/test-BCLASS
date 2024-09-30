@@ -5,14 +5,16 @@ import { dataInfo } from '@utils//constant'
 const Info = () => {
     return (
         <div className={style.containerGlobal}>
-            {dataInfo.map((info) => (
-                <InfoItem
-                    key={info.type}
-                    type={info.type}
-                    title={info.title}
-                    content={info.content}
-                />
-            ))}
+            <div className={style.infoMain}>
+                {dataInfo.map((info) => (
+                    <InfoItem
+                        key={info.type}
+                        type={info.type}
+                        title={info.title}
+                        content={info.content}
+                    />
+                ))}
+            </div>
         </div>
     )
 }
