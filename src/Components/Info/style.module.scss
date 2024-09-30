@@ -1,0 +1,32 @@
+@import '@styles/global.module.scss';
+@import '@styles/mixin.module.scss';
+@import '@styles/variable.module.scss';
+
+.containerGlobal {
+    position: relative;
+    top: -80px;
+    @include flex_custom(space-between, center, 15px);
+    background-color: $primary_color;
+    padding: 20px 55px;
+}
+
+.containerInforItem {
+    @include flex_custom(center, center, 10px);
+    color: $white_color;
+}
+
+.containerContent {
+    @include flex_custom(center, start, 15px);
+    flex-direction: column;
+    padding: 15px;
+    &_title {
+        font-size: 17px;
+        line-height: 22px;
+    }
+
+    &_content {
+        font-size: 16px;
+        line-height: 21px;
+        color: $white_two_color;
+    }
+}

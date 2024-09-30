@@ -1,11 +1,15 @@
-import Home from '@components/Home'
-import ContextProvider from '@context/ProviderContext'
+import MainLayOut from '@components/Layout/Layout'
+import HomePage from '@components/pages/HomePage/HomePage'
 
 function App() {
     return (
-        <ContextProvider>
-            <Home />
-        </ContextProvider>
+        // <ContextProvider>
+        //     <Home />
+        // </ContextProvider>
+
+        <MainLayOut>
+            <HomePage />
+        </MainLayOut>
     )
 }
 
