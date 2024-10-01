@@ -2,7 +2,7 @@ import shoppingCartIcon from '@icons/svgs/shopingCartIcon.svg'
 import heartIcon  from '@icons/svgs/heartIcon.svg'
 import reloadIcon from '@icons/svgs/reloadIcon.svg'
 import eyeIcon from '@icons/svgs/eyeIcon.svg'
-import style from '../styles.module.scss'
+import style from '../style.module.scss'
 
 const ToastBox = ({type, href}) => {
 
