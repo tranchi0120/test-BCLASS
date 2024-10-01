@@ -1,4 +1,4 @@
-import style from './styles.module.scss'
+import style from './style.module.scss'
 import ProductItem from '@components/Product/ProductItem/ProductItem.jsx'
 import { useEffect, useState } from 'react'
 import axiosInstance from '@/API/api.js'

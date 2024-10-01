@@ -1,5 +1,5 @@
 import image from '@images/image.png'
-import style from '../styles.module.scss'
+import style from '../style.module.scss'
 import { useState } from 'react'
 import ToastBox from '@components/Product/toastBox/ToastBox.jsx'
 import { dataToastBox } from '@utils//constant.js'
