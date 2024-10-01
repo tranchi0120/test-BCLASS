@@ -1,15 +1,39 @@
 import image from '@images/image.png'
-import style from '../style.module.scss'
+import style from '../styles.module.scss'
+import { useState } from 'react'
+import ToastBox from '@components/Product/toastBox/ToastBox.jsx'
+import { dataToastBox } from '@utils//constant.js'
 
-const ProductItem = () => {
+const ProductItem = (props) => {
+    const { name, price, images } = props
+    const [isShow, setIsShow] = useState(false)
+    const [img, setImg] = useState(images[0])
 
-    return <div>
-        <div className={style.productItem_img}>
-            <img src={image} alt="#!" />
+    const toggleHover = (show) => {
+        setIsShow(show)
+        setImg(show ? images[1] : images[0])
+    }
+
+    return (
+        <div>
+            <div className={style.productItem_main}>
+                <div
+                    className={style.productItem_img}
+                    onMouseEnter={() => toggleHover(true)}
+                    onMouseLeave={() => toggleHover(false)}
+                >
+                    <img src={img} alt="Product" />
+                    <div className={style.toastBox}>
+                        {isShow && dataToastBox.map((toastIcon, index) => (
+                            <ToastBox key={index} type={toastIcon.type} href={toastIcon.href} />
+                        ))}
+                    </div>
+                </div>
+                <h2 className={style.productItem_name}>{name}</h2>
+                <p className={style.productItem_price}>${price}</p>
+            </div>
         </div>
-        <h2 className={style.productItem_name}>10K Yellow Gold</h2>
-        <p className={style.productItem_price}> $99.99</p>
-    </div>
+    )
 }
 
 export default ProductItem

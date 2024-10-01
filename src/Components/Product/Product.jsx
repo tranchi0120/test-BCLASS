@@ -1,17 +1,23 @@
-import style from './style.module.scss'
+import style from './styles.module.scss'
 import ProductItem from '@components/Product/ProductItem/ProductItem.jsx'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import axiosInstance from '@/API/api.js'
 
 const Product = () => {
+    const [products, setProducts] = useState([])
+    const [loading, setLoading] = useState(false)
     useEffect(() => {
         const fetchingProduct = async () => {
+            setLoading(true)
             try {
-                const res = await axiosInstance.get("product")
-                const { data } = res
-                console.log({ data })
+                const res = await axiosInstance.get('product')
+                const result = res.data.contents
+                console.log(result)
+                setProducts(result)
             } catch (error) {
-                console.error("Error fetching products:", error)
+                console.log('Error fetching products')
+            } finally {
+                setLoading(false)
             }
         }
         fetchingProduct()
@@ -24,7 +30,21 @@ const Product = () => {
                 <h1 className={style.product_title}>Our best products</h1>
             </div>
 
-            <ProductItem />
+            {loading && <div>Loading.....</div>}
+
+            <div className={style.product_sale}>
+
+            </div>
+            <div className={style.product_List}>
+                {!loading && products?.map((product) => (
+                    <ProductItem
+                        key={product.id}
+                        name={product.name}
+                        price={product.price}
+                        images={product.images}
+                    />
+                ))}
+            </div>
         </div>
     )
 }

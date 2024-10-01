@@ -37,4 +37,12 @@ const dataInfo = [
     }
 ]
 
-export { dataBoxIcon, dataMenu, dataInfo }
+
+const dataToastBox = [
+    { type: 'shoppingCartIcon', href: '#!' },
+    { type: 'heartIcon', href: '#!' },
+    { type: 'reloadIcon', href: '#!' },
+    { type: 'eyeIcon', href: '#!' },
+]
+
+export { dataBoxIcon, dataMenu, dataInfo, dataToastBox }
