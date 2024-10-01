@@ -1,4 +1,4 @@
-import instance from "@utils/data/instance";
+import instance from "@/exampleTest/data/instance.js";
 import { useEffect, useState } from "react";
 
 const useFetch = () => {

@@ -2,7 +2,7 @@
 @import '@styles/mixin.module.scss';
 @import '@styles/variable.module.scss';
 
-.containerGlobal {
+.infoMain {
     position: relative;
     top: -80px;
     @include flex_custom(space-between, center, 15px);
