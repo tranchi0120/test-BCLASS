@@ -16,5 +16,12 @@ export default defineConfig({
             '@icons': path.resolve(__dirname, 'src/assets/icons'),
             '@images': path.resolve(__dirname, 'src/assets/images')
         }
+    },
+    css: {
+        preprocessorOptions: {
+            scss: {
+                api: 'modern-compiler'
+            }
+        }
     }
 })
