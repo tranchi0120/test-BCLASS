@@ -5,7 +5,6 @@ import ingIcon from '@icons/svgs/ingsIcon.svg'
 import style from '../Styles.module.scss'
 
 const BoxIcon = ({ type, href }) => {
-    console.log(href)
     const getIcon = (type) => {
         switch (type) {
             case 'fb':
@@ -21,7 +20,7 @@ const BoxIcon = ({ type, href }) => {
 
     return (
         <div className={style.boxIcon}>
-            <img src={getIcon(type)} alt={type} />
+            <img src={getIcon(type)} alt={href} />
         </div>
     )
 }

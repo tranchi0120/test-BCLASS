@@ -16,3 +16,12 @@
     align-items: $y;
     gap: $gap;
 }
+
+
+@mixin grid_custom($number, $x, $y,  $gap: 10px) {
+    display: grid;
+    grid-template-columns: repeat($number, (1fr));
+    justify-content: $x;
+    align-items: $y;
+    gap: $gap;
+}

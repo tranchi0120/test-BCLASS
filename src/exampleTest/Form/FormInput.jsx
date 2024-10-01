@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react'
 import { Button, Form, Input, Select } from 'antd'
-import ContextData from '@context/context'
-import { acreageOptions, PriceOptions } from '@utils/data/defaultData'
+import ContextData from '@/exampleTest/ConText/context.js'
+import { acreageOptions, PriceOptions } from '@/exampleTest/data/defaultData.js'
 
 const FormInput = () => {
     const { listCity, listDistrict, listData, setFilteredData } =
