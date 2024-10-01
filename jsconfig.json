@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "@components/*": ["src/Components/*"],
+            "@styles/*": ["src/utils/styles/*"],
+            "@assets/*": ["src/assets/*"],
+            "@hooks/*": ["src/hooks/*"],
+            "@icons/*": ["src/assets/icons/*"],
+            "@context/*": ["src/ConText/*"],
+            "@images/*": ["src/assets/images/*"],
+            "@utils/*": ["src/utils*"]
+        },
+        "lib": ["es6", "dom"],
+        "target": "es6"
+    },
+    "include": ["src/**/*"]
+}

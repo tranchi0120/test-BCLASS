@@ -1,12 +1,15 @@
-import './App.css'
-import Home from "./Components/Home.jsx";
+import MainLayOut from '@components/Layout/Layout'
+import HomePage from '@components/pages/HomePage/HomePage'
 
 function App() {
-
     return (
-        <>
-            <Home/>
-        </>
+        // <ContextProvider>
+        //     <Home />
+        // </ContextProvider>
+
+        <MainLayOut>
+            <HomePage />
+        </MainLayOut>
     )
 }
 

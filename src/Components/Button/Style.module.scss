@@ -1,0 +1,17 @@
+@import '@styles/mixin.module.scss';
+@import '@styles/variable.module.scss';
+
+.btn {
+    outline: none;
+    border: 0.5px solid $four_color;
+    margin-top: 20px;
+    @include radius_common(4px);
+    color: $white_color;
+    transform: background-color 0.3s ease-in-out;
+    @include btn(176px, 42px, 4px, $primary_color);
+}
+
+.btn:hover {
+    background-color: unset;
+    color: $four_color;
+}
