@@ -1,0 +1,48 @@
+@import '@styles/mixin.module.scss';
+@import '@styles/global.module.scss';
+@import '@styles/variable.module.scss';
+
+.salehome {
+  margin-top: 140px;
+  &_main {
+    @include flex_custom(space-around, center);
+  }
+
+  &_content {
+    max-width: 350px;
+    @include flex_custom(center, center, 20px);
+    flex-direction: column;
+    &__title {
+      font-size: 35px;
+      font-weight: 400;
+      line-height: 46px;
+      color: $six_color;
+    }
+    p {
+      color: $secondary_color;
+      width: 320px;
+      font-size: 16px;
+      text-align: center;
+      line-height: 30px;
+    }
+  }
+  &_imgleft,
+  &_imgright {
+    transition: transform 0.6s ease;
+  }
+}
+
+.btn {
+  outline: none;
+  border: 0.5px solid $four_color;
+  margin-top: 20px;
+  @include radius_common(4px);
+  color: $secondary_color;
+  transform: all 0.3s ease-in-out;
+  @include btn(176px, 42px, 4px, unset);
+}
+
+.btn:hover {
+  background-color: $four_color;
+  color: $white_color;
+}

@@ -2,28 +2,43 @@
 @import '@styles/variable.module.scss';
 
 .bannerContainer {
-    background-image: url('../../assets/images/banner.jpeg');
-    height: 750px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    top: 0;
-    z-index: -1;
-    @include flex_custom(center, center, 25px);
-    flex-direction: column;
+  background-image: url('../../assets/images/banner.jpeg');
+  height: 750px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  top: 0;
+  z-index: -1;
+  @include flex_custom(center, center, 25px);
+  flex-direction: column;
 }
 
 .banner {
+  color: $four_color;
+  font-weight: 400;
+
+  &_title {
+    font-size: 42px;
+  }
+
+  &_content {
     color: $four_color;
-    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
 
-    &_title {
-        font-size: 42px;
-    }
+.btn {
+  outline: none;
+  border: 0.5px solid $four_color;
+  margin-top: 20px;
+  @include radius_common(4px);
+  color: $white_color;
+  transform: all 0.3s ease-in-out;
+  @include btn(176px, 42px, 4px, $primary_color);
+}
 
-    &_content {
-        color: $four_color;
-        font-size: 16px;
-        line-height: 25px;
-    }
+.btn:hover {
+  background-color: unset;
+  color: $four_color;
 }

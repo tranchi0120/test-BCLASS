@@ -13,7 +13,6 @@ const Product = () => {
       try {
         const res = await axiosInstance.get('product')
         const result = res.data.contents
-        console.log(result)
         setProducts(result)
       } catch (error) {
         console.log('Error fetching products')
@@ -40,7 +39,7 @@ const Product = () => {
         {!loading &&
           products?.map((product) => (
             <ProductItem
-              key={product.id}
+              key={product._id}
               name={product.name}
               price={product.price}
               images={product.images}
