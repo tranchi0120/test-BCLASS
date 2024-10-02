@@ -56,7 +56,7 @@ const CountdownTimer = () => {
           </div>
         </div>
         <p className={style.countdown_title}>The classics make a comeback</p>
-        <Button content={'Buy Now'} />
+        <Button content={'Buy Now'} className={style.btn} />
       </div>
     </>
   )

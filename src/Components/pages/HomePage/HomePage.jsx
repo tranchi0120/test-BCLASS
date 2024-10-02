@@ -3,6 +3,7 @@ import Info from '@components/Info/Info'
 import Header from '@components/Header/Header'
 import Product from '@components/Product/Product.jsx'
 import Footer from '@components/Footer/Footer.jsx'
+import SaleHome from '@components/SaleHome/SaleHome.jsx'
 
 const HomePage = () => {
   return (
@@ -11,6 +12,7 @@ const HomePage = () => {
       <Banner />
       <Info />
       <Product />
+      <SaleHome />
       <Footer />
     </div>
   )
