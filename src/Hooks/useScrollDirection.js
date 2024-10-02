@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from 'react'
 const useScrollDirection = () => {
   const [scrollDriction, setScrollDriction] = useState(null)
   const previousScrollDriction = useRef(0)
-  const [translateXPosition, setTranslateXPosition] = useState(80)
+  const [translateXPosition, setTranslateXPosition] = useState(15)
   const [scrollPosition, setScrollPosition] = useState(0)
 
   const scrollTracking = () => {
@@ -19,16 +19,17 @@ const useScrollDirection = () => {
   }
 
   const handleTranslateX = () => {
-    if (scrollDriction === 'down' && scrollPosition >= 900) {
+    if (scrollDriction === 'down' && scrollPosition >= 1100) {
       setTranslateXPosition(
         translateXPosition <= 0 ? 0 : translateXPosition - 1
       )
     } else if (scrollDriction === 'up') {
       setTranslateXPosition(
-        translateXPosition >= 80 ? 80 : translateXPosition + 1
+        translateXPosition >= 15 ? 15 : translateXPosition + 1
       )
     }
   }
+  console.log({ scrollPosition })
 
   useEffect(() => {
     window.addEventListener('scroll', scrollTracking)
