@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
@@ -14,7 +13,8 @@ export default defineConfig({
       '@utils': path.resolve(__dirname, 'src/utils'),
       '@styles': path.resolve(__dirname, 'src/assets/styles'),
       '@icons': path.resolve(__dirname, 'src/assets/icons'),
-      '@images': path.resolve(__dirname, 'src/assets/images')
+      '@images': path.resolve(__dirname, 'src/assets/images'),
+      '@router': path.resolve(__dirname, 'src/router')
     }
   },
   css: {
