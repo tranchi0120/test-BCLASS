@@ -9,7 +9,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
       '@components': path.resolve(__dirname, 'src/Components'),
       '@context': path.resolve(__dirname, 'src/ConText'),
-      '@hooks': path.resolve(__dirname, 'src/hooks'),
+      '@hooks': path.resolve(__dirname, 'src/Hooks'),
       '@utils': path.resolve(__dirname, 'src/utils'),
       '@styles': path.resolve(__dirname, 'src/assets/styles'),
       '@icons': path.resolve(__dirname, 'src/assets/icons'),
