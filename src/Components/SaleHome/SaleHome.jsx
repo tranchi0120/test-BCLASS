@@ -2,7 +2,6 @@ import style from './style.module.scss'
 import imgLeft from '@images/saleImgLeft.jpeg'
 import imgRight from '@images/saleImgRight.jpeg'
 import Button from '@components/Button/Button.jsx'
-import { useState, useRef, useEffect } from 'react'
 import useScrollDirection from '@hooks/useScrollDirection.js'
 
 const SaleHome = () => {
